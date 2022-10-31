@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context=".fragments.RisponsibleReportsFragment">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbarFadeDuration="100000"
+        android:paddingTop="110dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/big_big_big_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:layout_marginBottom="@dimen/big_big_margin">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="50">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/stepsConstraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/stepsCircularProgressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                app:cpb_background_progressbar_color="@color/colorPrimary"
+                                app:cpb_background_progressbar_width="10dp"
+                                app:cpb_progress="0"
+                                app:cpb_progress_direction="to_right"
+                                app:cpb_progress_max="100"
+                                app:cpb_progressbar_color="@color/colorAccent"
+                                app:cpb_progressbar_width="10dp"
+                                app:cpb_round_border="false"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <TextView
+                                android:id="@+id/stepsPercentageTextView"
+                                android:text="@string/_0_percent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_steps"
+                                app:tint="@color/colorAccent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/stepsPercentageTextView"/>
+
+                            <TextView
+                                android:text="@string/pasos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/stepsPercentageTextView" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/stepsDetailsTextView"
+                            android:text="@string/sin_datos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="50">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/distanceConstraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/distanceCircularProgressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                app:cpb_background_progressbar_color="@color/colorPrimary"
+                                app:cpb_background_progressbar_width="10dp"
+                                app:cpb_progress="0"
+                                app:cpb_progress_direction="to_right"
+                                app:cpb_progress_max="100"
+                                app:cpb_progressbar_color="@color/colorAccent"
+                                app:cpb_progressbar_width="10dp"
+                                app:cpb_round_border="false"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <TextView
+                                android:id="@+id/distancePercentageTextView"
+                                android:text="@string/_0_percent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_distance"
+                                app:tint="@color/colorAccent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/distancePercentageTextView"/>
+
+                            <TextView
+                                android:text="@string/distancia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/distancePercentageTextView" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/distanceDetailsTextView"
+                            android:text="@string/sin_datos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:layout_marginBottom="@dimen/big_big_margin">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="50">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/caloriesConstraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/caloriesCircularProgressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                app:cpb_background_progressbar_color="@color/colorPrimary"
+                                app:cpb_background_progressbar_width="10dp"
+                                app:cpb_progress="0"
+                                app:cpb_progress_direction="to_right"
+                                app:cpb_progress_max="100"
+                                app:cpb_progressbar_color="@color/colorAccent"
+                                app:cpb_progressbar_width="10dp"
+                                app:cpb_round_border="false"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <TextView
+                                android:id="@+id/caloriesPercentageTextView"
+                                android:text="@string/_0_percent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_calorias"
+                                app:tint="@color/colorAccent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/caloriesPercentageTextView"/>
+
+                            <TextView
+                                android:text="@string/calorias"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/caloriesPercentageTextView" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/caloriesDetailsTextView"
+                            android:text="@string/sin_datos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="50">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/heartBeatConstraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/heartBeatCircularProgressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                app:cpb_background_progressbar_color="@color/colorPrimary"
+                                app:cpb_background_progressbar_width="10dp"
+                                app:cpb_progress="0"
+                                app:cpb_progress_direction="to_right"
+                                app:cpb_progress_max="100"
+                                app:cpb_progressbar_color="@color/colorAccent"
+                                app:cpb_progressbar_width="10dp"
+                                app:cpb_round_border="false"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <TextView
+                                android:id="@+id/heartBeatPercentageTextView"
+                                android:text="@string/_0_percent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_heart"
+                                app:tint="@color/colorAccent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/heartBeatPercentageTextView"/>
+
+                            <TextView
+                                android:text="@string/latidos_por_minuto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/heartBeatPercentageTextView" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/heartBeatDetailsTextView"
+                            android:text="@string/sin_datos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:layout_marginBottom="@dimen/big_big_margin">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="50">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/sleepConstraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/sleepCircularProgressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                app:cpb_background_progressbar_color="@color/colorPrimary"
+                                app:cpb_background_progressbar_width="10dp"
+                                app:cpb_progress="0"
+                                app:cpb_progress_direction="to_right"
+                                app:cpb_progress_max="100"
+                                app:cpb_progressbar_color="@color/colorAccent"
+                                app:cpb_progressbar_width="10dp"
+                                app:cpb_round_border="false"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <TextView
+                                android:id="@+id/sleepPercentageTextView"
+                                android:text="@string/_0_percent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_sleep"
+                                app:tint="@color/colorAccent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/sleepPercentageTextView"/>
+
+                            <TextView
+                                android:text="@string/sueno"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/sleepPercentageTextView" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/sleepDetailsTextView"
+                            android:text="@string/sin_datos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="50">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/weightConstraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/weightCircularProgressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                app:cpb_background_progressbar_color="@color/colorPrimary"
+                                app:cpb_background_progressbar_width="10dp"
+                                app:cpb_progress="0"
+                                app:cpb_progress_direction="to_right"
+                                app:cpb_progress_max="100"
+                                app:cpb_progressbar_color="@color/colorAccent"
+                                app:cpb_progressbar_width="10dp"
+                                app:cpb_round_border="false"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <TextView
+                                android:id="@+id/weightPercentageTextView"
+                                android:text="@string/_0_percent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_monitor_weight"
+                                app:tint="@color/colorAccent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/weightPercentageTextView"/>
+
+                            <TextView
+                                android:text="@string/peso"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/weightPercentageTextView" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/weightDetailsTextView"
+                            android:text="@string/sin_datos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:layout_marginBottom="@dimen/big_big_margin">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="50">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/oximetryConstraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/oximetryCircularProgressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                app:cpb_background_progressbar_color="@color/colorPrimary"
+                                app:cpb_background_progressbar_width="10dp"
+                                app:cpb_progress="0"
+                                app:cpb_progress_direction="to_right"
+                                app:cpb_progress_max="100"
+                                app:cpb_progressbar_color="@color/colorAccent"
+                                app:cpb_progressbar_width="10dp"
+                                app:cpb_round_border="false"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <TextView
+                                android:id="@+id/oximetryPercentageTextView"
+                                android:text="@string/_0_percent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_oxygen"
+                                app:tint="@color/colorAccent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/oximetryPercentageTextView"/>
+
+                            <TextView
+                                android:text="@string/spo2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/oximetryPercentageTextView" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/oximetryDetailsTextView"
+                            android:text="@string/sin_datos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

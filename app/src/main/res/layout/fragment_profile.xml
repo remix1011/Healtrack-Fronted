@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context=".fragments.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/big_big_big_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/big_big_margin"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="@dimen/big_big_margin"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/especialistasAsignadosTextView"
+                android:text="@string/especialistas_asignados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"/>
+
+            <com.libizo.CustomEditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_person"
+                android:hint="@string/nombre_de_usuario"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:text=""
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                app:libIZO_setBackgroundColor="@android:color/white"
+                app:libIZO_setBorderColor="@android:color/darker_gray"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+            <com.libizo.CustomEditText
+                android:id="@+id/fullnameCustomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/big_margin"
+                android:drawableStart="@drawable/ic_person"
+                android:hint="@string/nombre_completo"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:text=""
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                app:libIZO_setBackgroundColor="@android:color/white"
+                app:libIZO_setBorderColor="@android:color/darker_gray"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+            <com.libizo.CustomEditText
+                android:id="@+id/emailCustomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/big_margin"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="@string/correo"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:text=""
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                app:libIZO_setBackgroundColor="@android:color/white"
+                app:libIZO_setBorderColor="@android:color/darker_gray"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+            <com.libizo.CustomEditText
+                android:id="@+id/dniCustomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/big_margin"
+                android:drawableStart="@drawable/ic_news"
+                android:hint="@string/dni"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:text=""
+                android:inputType="number"
+                android:maxLength="8"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                app:libIZO_setBackgroundColor="@android:color/white"
+                app:libIZO_setBorderColor="@android:color/darker_gray"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+            <com.libizo.CustomEditText
+                android:id="@+id/birthdayCustomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/big_margin"
+                android:drawableStart="@drawable/ic_calendar"
+                android:hint="@string/fecha_de_nacimiento"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:text=""
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                app:libIZO_setBackgroundColor="@android:color/white"
+                app:libIZO_setBorderColor="@android:color/darker_gray"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+            <RadioGroup
+                android:id="@+id/userTypeRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/big_margin">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/userResponsableAppCompatRadioButton"
+                    android:text="@string/usuario_responsable"
+                    android:checked="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/userEspecialistaAppCompatRadioButton"
+                    android:text="@string/especialista"
+                    android:checked="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/big_margin"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/passwordLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/big_margin"
+                android:weightSum="100">
+
+                <com.libizo.CustomEditText
+                    android:id="@+id/passwordCustomEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:hint="@string/password"
+                    android:text="********"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toStartOf="@id/editPasswordAppCompatImageButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/emailCustomEditText"
+                    app:libIZO_setBackgroundColor="@android:color/white"
+                    app:libIZO_setBorderColor="@android:color/darker_gray"
+                    app:libIZO_setBorderView="true"
+                    app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/editPasswordAppCompatImageButton"
+                    app:srcCompat="@drawable/ic_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/colorAccent"/>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/logoutConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/big_margin"
+                android:background="@drawable/button_bordered"
+                android:layout_marginTop="@dimen/big_margin">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/logoutBorderConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:text="@string/cerrar_sesion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/big_margin"
+                        android:layout_marginEnd="@dimen/big_margin"
+                        app:layout_constraintStart_toEndOf="@id/logoutAppCompatImageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/logoutAppCompatImageView"
+                        app:srcCompat="@drawable/ic_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/default_margin"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

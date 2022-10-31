@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.karique.work.dev.healthtrack">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.SpecialistGoToResponsibleMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.OximetryReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.WeightReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SleepReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.HeartBeatReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CaloriesReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DistanceReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.StepsReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RecommendationsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.TreatmentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DiseaseCategoryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DemeanorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CaringEnvironmentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddSpecialistByResponsableActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SpecialistMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ResetPasswordInAppActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ResetPasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ResponsibleMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDufk8VKXaGMvxyFacKf5rzBXnj8OM5Q6c" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_foreground" />
+    </application>
+
+</manifest>

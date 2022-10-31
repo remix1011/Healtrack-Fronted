@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context=".fragments.CaringFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="110dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/big_big_big_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/allDataLinearLayoutCompat"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/caringEnvironmentConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:background="@drawable/button_bordered"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                android:layout_marginTop="@dimen/big_margin">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/caringEnvironmentInnerLinearLayoutCompat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="100">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/caringEnvironmentTitleTextView"
+                            android:text="@string/ambiente_de_cuidados"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/big_margin"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"
+                            android:maxLines="3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/clinicNameTextView"
+                            android:text="@string/nombre_de_la_clinica"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/enviromentNameTextView"
+                            android:text="@string/ambiente"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginBottom="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_bordered_selected">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_chevron_right"
+                            app:tint="@color/colorPrimary"
+                            android:layout_gravity="center_vertical"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/diseaseCategoryConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:background="@drawable/button_bordered"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                android:layout_marginTop="@dimen/big_margin">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/diseaseCategoryInnerLinearLayoutCompat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="100">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/diseaseCategoryTitleTextView"
+                            android:text="@string/avance_de_la_enfermedad"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/big_margin"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"
+                            android:maxLines="3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/diseaseCategoryTypeDescriptionTextView"
+                            android:text="@string/descripcion"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"
+                            android:layout_marginBottom="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_bordered_selected">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_chevron_right"
+                            app:tint="@color/colorPrimary"
+                            android:layout_gravity="center_vertical"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/treatmentHistoryConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:background="@drawable/button_bordered"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                android:layout_marginTop="@dimen/big_margin">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/treatmentHistoryInnerLinearLayoutCompat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="100">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/treatmentTitleTextView"
+                            android:text="@string/tratamiento"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/big_margin"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"
+                            android:maxLines="3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/treatmentDescriptionTextView"
+                            android:text="@string/descripcion"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"
+                            android:layout_marginBottom="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_bordered_selected">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_chevron_right"
+                            app:tint="@color/colorPrimary"
+                            android:layout_gravity="center_vertical"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/demeanorConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:background="@drawable/button_bordered"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                android:layout_marginTop="@dimen/big_margin">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/demeanorInnerLinearLayoutCompat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="100">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/demeanorTitleTextView"
+                            android:text="Conducta"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/big_margin"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"
+                            android:maxLines="3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/frecuencyTextView"
+                            android:text="Frecuencia"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/intensityTextView"
+                            android:text="Intensidad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginBottom="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_bordered_selected">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_chevron_right"
+                            app:tint="@color/colorPrimary"
+                            android:layout_gravity="center_vertical"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recommendationsConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:background="@drawable/button_bordered"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                android:layout_marginTop="@dimen/big_margin">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/recommendationsInnerLinearLayoutCompat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="100">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/recommendationTitleTextView"
+                            android:text="@string/recomendaci_n"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/big_margin"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"
+                            android:maxLines="3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/recommendationDescriptionTextView"
+                            android:text="@string/descripcion"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginStart="@dimen/big_margin"
+                            android:layout_marginEnd="@dimen/big_margin"
+                            android:layout_marginBottom="@dimen/big_margin"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_bordered_selected">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_chevron_right"
+                            app:tint="@color/colorPrimary"
+                            android:layout_gravity="center_vertical"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.DistanceReportActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbarConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/topRoundView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="-100dp"
+            android:layout_marginEnd="-100dp"
+            android:background="@drawable/arc"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/big_margin"
+            android:indeterminate="true"
+            android:theme="@style/ProgressBarStyleWhite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarTitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbarTitleTextView" />
+
+        <TextView
+            android:id="@+id/toolbarTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_margin"
+            android:text="Reporte distancias recorridas"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/backAppCompatImageButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/backAppCompatImageButton"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_close"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbarTitleTextView"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarTitleTextView"
+            android:visibility="visible"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/filterControlsCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="@dimen/big_margin"
+        android:layout_marginEnd="@dimen/big_margin"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/big_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginStart="@dimen/big_margin">
+
+            <com.libizo.CustomEditText
+                android:id="@+id/startDateCustomEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:drawableStart="@drawable/ic_calendar"
+                android:hint="Fecha inicio"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_gravity="center_vertical"
+                app:libIZO_setBackgroundColor="@android:color/white"
+                app:libIZO_setBorderColor="@android:color/darker_gray"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+            <com.libizo.CustomEditText
+                android:id="@+id/endDateCustomEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:drawableStart="@drawable/ic_calendar"
+                android:hint="Fecha fin"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_gravity="center_vertical"
+                app:libIZO_setBackgroundColor="@android:color/white"
+                app:libIZO_setBorderColor="@android:color/darker_gray"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchFilterCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="360dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                android:layout_marginBottom="@dimen/big_margin">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/searchFilterAppCompatImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_search"
+                    android:layout_margin="@dimen/default_margin"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/big_margin"
+        android:layout_marginEnd="@dimen/big_margin"
+        android:layout_marginTop="@dimen/big_margin"
+        android:layout_marginBottom="@dimen/big_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterControlsCardView"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

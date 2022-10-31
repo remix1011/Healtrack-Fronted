@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbarConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/topRoundView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginStart="-70dp"
+            android:layout_marginEnd="-0dp"
+            android:background="@drawable/arc"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/big_margin"
+            android:indeterminate="true"
+            android:theme="@style/ProgressBarStyleWhite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarTitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbarTitleTextView" />
+
+        <TextView
+            android:id="@+id/toolbarTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/bienvenidoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Bienvenido"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/asistenteVirtualTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarConstraintLayout"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/asistenteVirtualTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:gravity="center_horizontal"
+        android:text="Por favor, inicia sesión"
+        app:layout_constraintBottom_toTopOf="@id/usernameCustomEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bienvenidoTextView" />
+
+    <com.libizo.CustomEditText
+        android:id="@+id/usernameCustomEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/big_big_big_margin"
+        android:layout_marginTop="@dimen/big_big_margin"
+        android:layout_marginEnd="@dimen/big_big_big_margin"
+        android:drawableStart="@drawable/ic_person"
+        android:hint="Correo"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordCustomEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asistenteVirtualTextView"
+        app:libIZO_setBackgroundColor="@android:color/white"
+        app:libIZO_setBorderColor="@android:color/darker_gray"
+        app:libIZO_setBorderView="true"
+        app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+    <com.libizo.CustomEditText
+        android:id="@+id/passwordCustomEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/big_big_big_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/big_big_big_margin"
+        android:drawableStart="@drawable/ic_lock"
+        android:hint="@string/password"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/loginCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameCustomEditText"
+        app:libIZO_setBackgroundColor="@android:color/white"
+        app:libIZO_setBorderColor="@android:color/darker_gray"
+        app:libIZO_setBorderView="true"
+        app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/big_big_big_margin"
+        android:layout_marginTop="@dimen/big_big_margin"
+        android:layout_marginEnd="@dimen/big_big_big_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:layout_constraintBottom_toTopOf="@+id/orTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordCustomEditText">
+
+        <ProgressBar
+            android:id="@+id/loginProgressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:indeterminate="true"
+            android:theme="@style/ProgressBarStyleWhite"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/loginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginBottom="@dimen/big_margin"
+            android:text="@string/ingresar"
+            android:textColor="@android:color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/orTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/or"
+        app:layout_constraintBottom_toTopOf="@+id/loginGoogleCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginCardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginGoogleCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/big_big_big_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/big_big_big_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/registerTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orTextView">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/googleAppCompatImageButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_google" />
+
+        <ProgressBar
+            android:id="@+id/loginGoogleProgressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:indeterminate="true"
+            android:theme="@style/ProgressBarStyleWhite"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/loginGoogleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginBottom="@dimen/big_margin"
+            android:text="Ingresar con Google"
+            android:textColor="@android:color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="@dimen/big_margin"
+        android:text="Registrate"
+        android:textColor="@color/colorAccent"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toTopOf="@+id/resetPasswordTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginGoogleCardView" />
+
+    <TextView
+        android:id="@+id/resetPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="@dimen/big_margin"
+        android:text="¿Olvidaste tu contraseña?"
+        android:textColor="@color/colorPrimary"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerTextView" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/arc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

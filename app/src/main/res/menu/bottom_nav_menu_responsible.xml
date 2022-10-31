@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_reportes"
+        android:icon="@drawable/ic_analytics"
+        android:title="@string/reportes" />
+
+    <item
+        android:id="@+id/navigation_cuidado"
+        android:icon="@drawable/ic_caring"
+        android:title="@string/salud" />
+
+    <item
+        android:id="@+id/navigation_ubicaciones"
+        android:icon="@drawable/ic_maps"
+        android:title="@string/ubicaciones_recurrentes" />
+
+    <item
+        android:id="@+id/navigation_mi_perfil"
+        android:icon="@drawable/ic_person"
+        android:title="@string/mi_perfil" />
+
+</menu>

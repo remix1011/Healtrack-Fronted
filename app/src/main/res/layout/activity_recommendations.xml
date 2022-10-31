@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.RecommendationsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:paddingBottom="@dimen/big_big_big_big_margin"
+        android:clipToPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inputConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bordered"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/inputInnerLinearLayoutCompat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/big_big_margin"
+                    android:layout_marginStart="@dimen/big_margin"
+                    android:layout_marginEnd="@dimen/big_margin"
+                    android:layout_marginBottom="@dimen/big_margin"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <com.libizo.CustomEditText
+                        android:id="@+id/recommendationsCustomEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_pen"
+                        android:hint="@string/recomendacion"
+                        android:imeOptions="actionDone"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:text=""
+                        android:inputType="text"
+                        android:layout_marginStart="@dimen/big_margin"
+                        android:layout_marginEnd="@dimen/big_margin"
+                        android:enabled="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:libIZO_setBackgroundColor="@android:color/white"
+                        app:libIZO_setBorderColor="@android:color/darker_gray"
+                        app:libIZO_setBorderView="true"
+                        app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+                    <com.libizo.CustomEditText
+                        android:id="@+id/nombrePacienteCustomEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_person"
+                        android:hint="@string/nombre_del_paciente"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:text=""
+                        android:inputType="text"
+                        android:layout_marginTop="@dimen/big_margin"
+                        android:layout_marginStart="@dimen/big_margin"
+                        android:layout_marginEnd="@dimen/big_margin"
+                        android:enabled="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:libIZO_setBackgroundColor="@android:color/white"
+                        app:libIZO_setBorderColor="@android:color/darker_gray"
+                        app:libIZO_setBorderView="true"
+                        app:libIZO_setCornerRadius="@dimen/default_margin" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/agregarCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/big_margin"
+                        android:layout_marginStart="@dimen/big_margin"
+                        android:layout_marginEnd="@dimen/big_margin"
+                        android:layout_marginBottom="@dimen/big_margin"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="@dimen/card_corner_radius">
+
+                        <ProgressBar
+                            android:id="@+id/agregarProgressBar"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:indeterminate="true"
+                            android:theme="@style/ProgressBarStyleWhite"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/agregarTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_marginTop="@dimen/big_margin"
+                            android:layout_marginBottom="@dimen/big_margin"
+                            android:text="@string/agregar_nuevo_tratamiento"
+                            android:textColor="@android:color/white" />
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/currentTitleTextView"
+                android:text="@string/actual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginStart="@dimen/big_big_margin"
+                android:layout_marginEnd="@dimen/big_margin" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/demeanorConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bordered"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/demeanorInnerLinearLayoutCompat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/big_margin"
+                    android:layout_marginStart="@dimen/big_margin"
+                    android:layout_marginEnd="@dimen/big_margin"
+                    android:layout_marginBottom="@dimen/big_margin"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommendationTitleTextView"
+                        android:text="@string/recomendaci_n"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommendationDescriptionTextView"
+                        android:text="@string/descripcion"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_margin"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recordDateTextView"
+                        android:text="@string/fecha_y_hora_placeholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="12sp"
+                        android:layout_marginTop="@dimen/default_margin"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/hitorialTitleTextView"
+                android:text="@string/historial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginStart="@dimen/big_big_margin"
+                android:layout_marginEnd="@dimen/big_margin"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommendationsHistoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:paddingBottom="@dimen/big_margin"
+                android:clipToPadding="false"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/messageConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/messageTextView"
+                    android:text="@string/no_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/reintentarAppCompatButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reintentar"
+                    android:textAllCaps="false"
+                    app:backgroundTint="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="@dimen/default_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/messageTextView"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbarConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/topRoundView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="-100dp"
+            android:layout_marginEnd="-100dp"
+            android:background="@drawable/arc"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/big_margin"
+            android:indeterminate="true"
+            android:theme="@style/ProgressBarStyleWhite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarTitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbarTitleTextView" />
+
+        <TextView
+            android:id="@+id/toolbarTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_margin"
+            android:text="@string/recomendaciones"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/backAppCompatImageButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/backAppCompatImageButton"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_close"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbarTitleTextView"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarTitleTextView"
+            android:visibility="visible"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

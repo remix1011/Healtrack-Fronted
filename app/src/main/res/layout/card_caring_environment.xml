@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/default_margin"
+    android:background="@drawable/button_bordered"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/caringEnvironmentInnerLinearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/big_margin"
+        android:layout_marginStart="@dimen/big_margin"
+        android:layout_marginEnd="@dimen/big_margin"
+        android:layout_marginBottom="@dimen/big_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/caringEnvironmentTitleTextView"
+            android:text="@string/ambiente_de_cuidados"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/clinicNameTextView"
+            android:text="@string/nombre_de_la_clinica"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/enviromentNameTextView"
+            android:text="@string/ambiente"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/recordDateTextView"
+            android:text="@string/fecha_y_hora_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/default_margin"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

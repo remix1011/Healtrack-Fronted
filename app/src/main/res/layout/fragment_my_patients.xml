@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context=".fragments.MyPatientsFragment">
+
+    <com.libizo.CustomEditText
+        android:id="@+id/searchEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_filter"
+        android:layout_marginStart="@dimen/big_margin"
+        android:layout_marginEnd="@dimen/big_margin"
+        android:layout_marginTop="110dp"
+        android:hint="Filtrar"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:imeOptions="actionDone"
+        android:textColor="@android:color/black"
+        app:libIZO_setBackgroundColor="@android:color/white"
+        app:libIZO_setBorderColor="@android:color/darker_gray"
+        app:libIZO_setBorderView="true"
+        app:libIZO_setCornerRadius="@dimen/default_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myPatientsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/big_margin"
+        android:layout_marginEnd="@dimen/big_margin"
+        android:layout_marginTop="@dimen/big_margin"
+        android:paddingBottom="@dimen/big_big_margin"
+        android:clipToPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchEditText"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/messageConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/myPatientsRecyclerView"
+        app:layout_constraintEnd_toEndOf="@id/myPatientsRecyclerView"
+        app:layout_constraintTop_toTopOf="@id/myPatientsRecyclerView"
+        app:layout_constraintBottom_toBottomOf="@id/myPatientsRecyclerView"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/messageTextView"
+            android:text="@string/no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reintentarAppCompatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reintentar"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/messageTextView"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

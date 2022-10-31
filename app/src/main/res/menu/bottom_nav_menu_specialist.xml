@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_mis_pacientes"
+        android:icon="@drawable/ic_paciente"
+        android:title="@string/mis_pacientes" />
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_conductas"-->
+<!--        android:icon="@drawable/ic_think"-->
+<!--        android:title="@string/conducta" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_ubicaciones"-->
+<!--        android:icon="@drawable/ic_maps"-->
+<!--        android:title="@string/ubicaciones_recurrentes" />-->
+
+    <item
+        android:id="@+id/navigation_mi_perfil"
+        android:icon="@drawable/ic_person"
+        android:title="@string/mi_perfil" />
+
+</menu>
